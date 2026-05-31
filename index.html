@@ -40,40 +40,17 @@ input,textarea,select{width:100%;padding:10px;margin:8px 0;border-radius:10px;bo
 <div class="flap"></div>
 <div class="letter">
 <p>The Wedding Of</p>
-
 <h2>Rizki & Ewillia</h2>
-
-<div id="guestName" style="
-margin-top:15px;
-margin-bottom:15px;
-color:#5A0F19;
-font-size:15px;
-line-height:1.8;
-">
+<button class="btn" onclick="openInvitation()">Buka Undangan</button>
 </div>
-
-<button class="btn" onclick="openInvitation()">
-Buka Undangan
-</button>
+</div>
+</div>
  
 <section class="reveal">
-
-<h1 style="color:#e7c27d;font-size:3rem">
-Rizki & Ewillia
-</h1>
-
+<h1 style="color:#e7c27d;font-size:3rem">Rizki & Ewillia</h1>
 <p>Sabtu, 06 Juni 2026</p>
-
-<div id="guestCover" style="
-margin-top:25px;
-font-size:20px;
-color:#e7c27d;
-font-weight:500;
-">
-</div>
-
 </section>
- 
+
  <section class="reveal">
 <h2 class="title">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
 
@@ -272,25 +249,6 @@ setInterval(()=>{
  document.body.appendChild(f);
  setTimeout(()=>f.remove(),10000);
 },600);
-
-const params = new URLSearchParams(window.location.search);
-
-const guest = params.get('to');
-
-if(guest){
-
-document.getElementById('guestCover').innerHTML = `
- <div style="font-size:14px;opacity:.8;">
-Kepada Yth.
-</div>
-
-<div style="
-font-size:24px;
-margin-top:5px;
-font-family:'Playfair Display',serif;
-">
-${guest}
-</div>
-`;</script>
+</script>
 </body>
 </html>
